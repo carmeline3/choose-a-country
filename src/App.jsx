@@ -1,64 +1,49 @@
-import { useState, useEffect } from "react";
-import countriesData from "./countries.json";
+import { useState } from "react";
+import countries from "./countries.json";
 
+// let myCountries = [
+//   {name:"DRC", code:"cd"},
+//   {name:"Israel", code:"il"},
+//   {name:"Luxembourg", code:"lu"},
+//   {name:"South Africa", code:"za"},
+//   {name:"USA", code:"us"},
+//   {name:"Zambia", code:"zm"},
+//   {name:"Ohio", code:"oh"},
+//   {name:"Argentina", code:"ar"},
+//   {name:"South Korae", code:"kr"},
+//   {name:"Italy", code:"it"},
+// ];
+
+// Holds every functionality for the dropdown
 function App() {
+  // This stores the country's code for it to be identified easily
+  let [selected, setSelected] = useState("");
 
-  const [countries, setCountries] = useState([]);
-  const [selectedCountry, setSelectedCountry] = useState(null);
-
-  useEffect(() => {
-    setCountries(countriesData);
-  }, []);
+  // This is for the the event listener
+  function handleChange(event) {
+    // console.log( event.target.value);
+    setSelected(event.target.value);
+  }
+  // console.log(selected);
 
   return (
-    <>
-      <h1>Choose a Country</h1>
-
-      <select
-        onChange={(event) => {
-
-          const chosenCountry = countries.find(
-            (country) => country.name === event.target.value
-          );
-
-          setSelectedCountry(chosenCountry);
-
-        }}
-      >
-
-        <option>Select a country</option>
-
-        {
-          countries.map((country) => (
-            <option
-              key={country.name}
-              value={country.name}
-            >
-              {country.name}
-            </option>
-          ))
-        }
-
+    <div className="chooseACountry">
+      <h1>Choose your country</h1>
+      <select onChange={handleChange}>
+  <option>Select a country</option>
+ {
+ countries.map((country) => (
+  <option key={country.code} value={country.code}>{country.name}</option>
+        ))}
       </select>
-
-      {
-        selectedCountry && (
-
-          <div>
-
-            <h2>{selectedCountry.name}</h2>
-
-            <img
-              src={selectedCountry.flag}
-              width="300"
-            />
-
-          </div>
-
-        )
-      }
-
-    </>
+      <Flag code={selected} />
+    </div>
+  );
+}
+// This will run when  the user chooses a flag, the image will appear
+function Flag({code}){
+  return (
+    <img src={`https://flagcdn.com/w320/${code}.png`}alt="flag"/>
   );
 }
 

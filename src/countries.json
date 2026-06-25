@@ -1,42 +1,40 @@
 [
   {
-    "name": "Brazil",
-    "flag": "https://flagcdn.com/w320/br.png"
+    "name": "DRC",
+    "code": "cd"
   },
   {
-    "name": "Argentina",
-    "flag": "https://flagcdn.com/w320/ar.png"
+    "name": "Israel",
+    "code": "il"
   },
   {
-    "name": "France",
-    "flag": "https://flagcdn.com/w320/fr.png"
+    "name": "Luxembourg",
+    "code": "lu"
   },
   {
-    "name": "Germany",
-    "flag": "https://flagcdn.com/w320/de.png"
-  },
-  {
-    "name": "Spain",
-    "flag": "https://flagcdn.com/w320/es.png"
-  },
-  {
-    "name": "Portugal",
-    "flag": "https://flagcdn.com/w320/pt.png"
-  },
-  {
-    "name": "Japan",
-    "flag": "https://flagcdn.com/w320/jp.png"
-  },
-  {
-    "name": "Mexico",
-    "flag": "https://flagcdn.com/w320/mx.png"
+    "name": "South Africa",
+    "code": "za"
   },
   {
     "name": "USA",
-    "flag": "https://flagcdn.com/w320/us.png"
+    "code": "us"
   },
   {
-    "name": "England",
-    "flag": "https://flagcdn.com/w320/gb-eng.png"
-  }
+    "name": "Zambia",
+    "code": "zm"
+  },
+  {
+    "name": "Italy",
+    "code": "it"
+  },
+  {
+    "name":"South Korea",
+    "code":"kr"
+  },
+  {
+   "name":"Ohio"
+  },
+  {"name":"Argentina",
+   "code":"ar"
+}
 ]
